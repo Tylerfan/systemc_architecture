@@ -314,4 +314,7 @@ stub.o: stub.cpp /usr/include/stdc-predef.h stub.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/5/bits/c++io.h \
  /usr/include/c++/5/bits/fstream.tcc \
- /usr/local/systemc-2.3.2/include/systemc transactor_if.h
+ /usr/local/systemc-2.3.2/include/systemc \
+ /usr/local/systemc-2.3.2/include/tlm_utils/simple_initiator_socket.h \
+ /usr/local/systemc-2.3.2/include/tlm \
+ /usr/local/systemc-2.3.2/include/tlm_utils/convenience_socket_bases.h

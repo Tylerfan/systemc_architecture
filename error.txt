@@ -1,0 +1,4 @@
+g++ -Wall -DSC_INCLUDE_DYNAMIC_PROCESSES -O3 -I/usr/local/systemc-2.3.2/include -o mem.o -c mem.cpp
+Makefile:42: recipe for target 'mem.o' failed
+g++ -Wall -DSC_INCLUDE_DYNAMIC_PROCESSES -O3 -I/usr/local/systemc-2.3.2/include -o mem.o -c mem.cpp
+Makefile:42: recipe for target 'mem.o' failed

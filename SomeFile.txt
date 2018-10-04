@@ -1,0 +1,1480 @@
+g++ -Wall -DSC_INCLUDE_DYNAMIC_PROCESSES -O3 -I/usr/local/systemc-2.3.2/include -o mem.o -c mem.cpp
+mem.cpp: In member function ‘void mem::custom_b_transport(tlm::tlm_generic_payload&, sc_core::sc_time&)’:
+mem.cpp:61:37: error: no match for ‘operator*’ (operand type is ‘sc_core::sc_signal<sc_dt::sc_lv<8> >’)
+                 ram[addr.read()] = (*data);
+                                     ^
+In file included from /usr/local/systemc-2.3.2/include/sysc/kernel/sc_module.h:38:0,
+                 from /usr/local/systemc-2.3.2/include/systemc:74,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:393:1: note: candidate: const sc_core::sc_time sc_core::operator*(const sc_core::sc_time&, double)
+ operator * ( const sc_time& t, double d )
+ ^
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:393:1: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:401:1: note: candidate: const sc_core::sc_time sc_core::operator*(double, const sc_core::sc_time&)
+ operator * ( double d, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:401:1: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/systemc:106:0,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:715:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(bool, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( bool a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:715:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( bool a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:711:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, bool)
+     inline RESULT operator OP ( const sc_concatref& a, bool b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:711:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, bool b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_unsigned&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_signed&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_uint_base&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_int_base&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, sc_dt::uint64)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(long unsigned int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, long unsigned int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(unsigned int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, unsigned int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, sc_dt::int64)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, long int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:697:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( const sc_concatref& a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:697:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1575:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_uint_base& u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1575:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1574:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_int_base&  u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1574:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1573:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_uint_base&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_uint_base& v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1573:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1572:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_int_base&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_int_base&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1572:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1556:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(unsigned int, const sc_dt::sc_signed&)
+   friend sc_signed operator * (unsigned int      u, const sc_signed&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1556:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1554:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_signed&)
+   friend sc_signed operator * (int               u, const sc_signed&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1554:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1553:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long unsigned int, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (unsigned long     u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1553:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1552:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (long              u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1552:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1551:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (uint64            u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1551:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1550:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (int64             u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1550:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1547:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, unsigned int)
+   friend sc_signed operator * (const sc_signed&  u, unsigned int      v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1547:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1545:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, int)
+   friend sc_signed operator * (const sc_signed&  u, int               v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1545:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1544:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, long unsigned int)
+   friend SC_API sc_signed operator * (const sc_signed&  u, unsigned long     v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1544:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1543:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, long int)
+   friend SC_API sc_signed operator * (const sc_signed&  u, long              v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1543:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1542:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, sc_dt::uint64)
+   friend SC_API sc_signed operator * (const sc_signed&  u, uint64            v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1542:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1541:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, sc_dt::int64)
+   friend SC_API sc_signed operator * (const sc_signed&  u, int64             v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1541:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1540:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_signed&  u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1540:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1571:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (const sc_int_base&  u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1571:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1422:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (const sc_uint_base& u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1422:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1570:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_int_base&)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, const sc_int_base&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1570:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1420:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_uint_base&)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, const sc_uint_base& v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1420:29: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1406:22: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(unsigned int, const sc_dt::sc_unsigned&)
+   friend sc_unsigned operator * (unsigned int        u, const sc_unsigned&  v)
+                      ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1406:22: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1537:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_unsigned&)
+   friend sc_signed operator * (int                 u, const sc_unsigned&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1537:20: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1404:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(long unsigned int, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (unsigned long       u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1404:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1536:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (long                u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1536:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1402:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (uint64              u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1402:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1535:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (int64               u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1535:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1398:22: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, unsigned int)
+   friend sc_unsigned operator * (const sc_unsigned&  u, unsigned int        v)
+                      ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1398:22: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1532:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, int)
+   friend sc_signed operator * (const sc_unsigned&  u, int                 v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1532:20: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1396:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, long unsigned int)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, unsigned long       v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1396:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1531:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, long int)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, long                v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1531:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1394:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, sc_dt::uint64)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, uint64              v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1394:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1530:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, sc_dt::int64)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, int64               v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1530:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1392:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1392:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1528:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1528:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1527:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1527:27: note:   candidate expects 2 arguments, 1 provided
+mem.cpp:62:41: error: no match for ‘operator*’ (operand type is ‘sc_core::sc_signal<sc_dt::sc_lv<8> >’)
+                 cout<< "write data" << (*data) << "at address" << addr;
+                                         ^
+In file included from /usr/local/systemc-2.3.2/include/sysc/kernel/sc_module.h:38:0,
+                 from /usr/local/systemc-2.3.2/include/systemc:74,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:393:1: note: candidate: const sc_core::sc_time sc_core::operator*(const sc_core::sc_time&, double)
+ operator * ( const sc_time& t, double d )
+ ^
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:393:1: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:401:1: note: candidate: const sc_core::sc_time sc_core::operator*(double, const sc_core::sc_time&)
+ operator * ( double d, const sc_time& t )
+ ^
+/usr/local/systemc-2.3.2/include/sysc/kernel/sc_time.h:401:1: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/systemc:106:0,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:715:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(bool, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( bool a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:715:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( bool a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:711:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, bool)
+     inline RESULT operator OP ( const sc_concatref& a, bool b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:711:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, bool b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_unsigned&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:710:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_unsigned&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_signed&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:709:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_signed&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_uint_base&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:708:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,const sc_uint_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_int_base&)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:707:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,const sc_int_base&) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, sc_dt::uint64)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:706:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,uint64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(long unsigned int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, long unsigned int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:705:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(unsigned int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, unsigned int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:704:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(RESULT,OP,unsigned int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, sc_dt::int64)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:703:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int64) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, long int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:702:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,long) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:690:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( OTHER_TYPE a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note: candidate: const sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_concatref&, int)
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:686:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, OTHER_TYPE b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:701:5: note: in expansion of macro ‘SC_CONCAT_OP_TYPE’
+     SC_CONCAT_OP_TYPE(const sc_signed,OP,int) \
+     ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:697:19: note: candidate: const sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_concatref&, const sc_dt::sc_concatref&)
+     inline RESULT operator OP ( const sc_concatref& a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:697:19: note:   candidate expects 2 arguments, 1 provided
+     inline RESULT operator OP ( const sc_concatref& a, const sc_concatref& b ) \
+                   ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/misc/sc_concatref.h:746:1: note: in expansion of macro ‘SC_CONCAT_OP’
+ SC_CONCAT_OP(const sc_unsigned,*)
+ ^
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1575:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_uint_base& u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1575:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1574:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_int_base&  u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1574:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1573:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_uint_base&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_uint_base& v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1573:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1572:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_int_base&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_int_base&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1572:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1556:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(unsigned int, const sc_dt::sc_signed&)
+   friend sc_signed operator * (unsigned int      u, const sc_signed&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1556:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1554:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_signed&)
+   friend sc_signed operator * (int               u, const sc_signed&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1554:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1553:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long unsigned int, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (unsigned long     u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1553:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1552:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (long              u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1552:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1551:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (uint64            u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1551:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1550:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (int64             u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1550:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1547:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, unsigned int)
+   friend sc_signed operator * (const sc_signed&  u, unsigned int      v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1547:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1545:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, int)
+   friend sc_signed operator * (const sc_signed&  u, int               v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1545:20: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1544:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, long unsigned int)
+   friend SC_API sc_signed operator * (const sc_signed&  u, unsigned long     v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1544:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1543:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, long int)
+   friend SC_API sc_signed operator * (const sc_signed&  u, long              v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1543:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1542:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, sc_dt::uint64)
+   friend SC_API sc_signed operator * (const sc_signed&  u, uint64            v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1542:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1541:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, sc_dt::int64)
+   friend SC_API sc_signed operator * (const sc_signed&  u, int64             v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1541:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1540:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_signed&  u, const sc_signed&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1540:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1571:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_int_base&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (const sc_int_base&  u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1571:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1422:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_uint_base&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (const sc_uint_base& u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1422:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1570:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_int_base&)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, const sc_int_base&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1570:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1420:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_uint_base&)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, const sc_uint_base& v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1420:29: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1406:22: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(unsigned int, const sc_dt::sc_unsigned&)
+   friend sc_unsigned operator * (unsigned int        u, const sc_unsigned&  v)
+                      ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1406:22: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1537:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(int, const sc_dt::sc_unsigned&)
+   friend sc_signed operator * (int                 u, const sc_unsigned&  v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1537:20: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1404:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(long unsigned int, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (unsigned long       u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1404:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1536:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(long int, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (long                u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1536:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1402:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(sc_dt::uint64, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (uint64              u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1402:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1535:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(sc_dt::int64, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (int64               u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1535:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1398:22: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, unsigned int)
+   friend sc_unsigned operator * (const sc_unsigned&  u, unsigned int        v)
+                      ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1398:22: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1532:20: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, int)
+   friend sc_signed operator * (const sc_unsigned&  u, int                 v)
+                    ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1532:20: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1396:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, long unsigned int)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, unsigned long       v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1396:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1531:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, long int)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, long                v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1531:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1394:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, sc_dt::uint64)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, uint64              v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1394:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1530:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, sc_dt::int64)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, int64               v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1530:27: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:103:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1392:29: note: candidate: sc_dt::sc_unsigned sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_unsigned operator * (const sc_unsigned&  u, const sc_unsigned&  v);
+                             ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_unsigned.h:1392:29: note:   candidate expects 2 arguments, 1 provided
+In file included from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_proxy.h:66:0,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bit_proxies.h:34,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_bv_base.h:58,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv_base.h:69,
+                 from /usr/local/systemc-2.3.2/include/sysc/datatypes/bit/sc_lv.h:51,
+                 from /usr/local/systemc-2.3.2/include/sysc/communication/sc_signal_rv.h:33,
+                 from /usr/local/systemc-2.3.2/include/systemc:93,
+                 from /usr/local/systemc-2.3.2/include/systemc.h:219,
+                 from mem.h:1,
+                 from mem.cpp:1:
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1528:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_signed&, const sc_dt::sc_unsigned&)
+   friend SC_API sc_signed operator * (const sc_signed&    u, const sc_unsigned&  v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1528:27: note:   candidate expects 2 arguments, 1 provided
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1527:27: note: candidate: sc_dt::sc_signed sc_dt::operator*(const sc_dt::sc_unsigned&, const sc_dt::sc_signed&)
+   friend SC_API sc_signed operator * (const sc_unsigned&  u, const sc_signed&    v);
+                           ^
+/usr/local/systemc-2.3.2/include/sysc/datatypes/int/sc_signed.h:1527:27: note:   candidate expects 2 arguments, 1 provided
+Makefile:42: recipe for target 'mem.o' failed
+make: *** [mem.o] Error 1

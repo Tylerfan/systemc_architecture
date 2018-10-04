@@ -3,11 +3,14 @@
 
 top::top(sc_core::sc_module_name name)
 : sc_core::sc_module(name)
-, trans("trans")
 //, dram("dram")
 , sram("sram")
 , cpu("cpu")
+, dram("dram")
 {
-cpu.master_port_one(trans);
-cpu.master_port_two(trans);
+    cpu.master_sram.bind(sram.slave);
+    cpu.master_dram.bind(dram.slave);
+    sram.clk(clk);
+    cpu.clk(clk);
+    dram.clk(clk);
 }

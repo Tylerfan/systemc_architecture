@@ -1,5 +1,5 @@
 $date
-     Oct 03, 2018       14:29:40
+     Oct 04, 2018       16:58:34
 $end
 
 $version
@@ -12,7 +12,7 @@ $end
 
 $scope module SystemC $end
 $var wire    1  aaaaa  clk       $end
-$var wire    6  aaaab  addr [5:0]  $end
+$var wire    8  aaaab  addr [7:0]  $end
 $var wire    1  aaaac  en       $end
 $var wire    1  aaaad  rw       $end
 $var wire    8  aaaae  data_in [7:0]  $end
@@ -25,10 +25,10 @@ $end
 
 $dumpvars
 1aaaaa
-b0 aaaab
+b1 aaaab
 1aaaac
 0aaaad
-b1 aaaae
+b1111 aaaae
 $end
 
 #5000
